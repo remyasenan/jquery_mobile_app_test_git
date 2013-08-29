@@ -1,0 +1,17 @@
+base: &base
+  adapter: mysql2
+  socket: /var/run/mysqld/mysqld.sock
+  username: root
+  password: root
+
+development:
+  database: jquery_mobile
+  <<: *base
+
+test:
+  database: revclaim_test
+  <<: *base
+
+production:
+  database: jquery_mobile
+  <<: *base
